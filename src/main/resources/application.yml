@@ -1,1 +1,18 @@
+server:
+  port: 8082 # 服务端口
 
+info:
+  application:
+    name: "@project.name@" # 从pom.xml中获取
+    description: "@project.description@"
+    version: "@project.version@"
+  management:
+    server:
+      port: 54001 # 指定监听端口，不指定则与server端口一直
+    endpoints: # 启动所有监控点
+      web:
+        exposure:
+          include: '*'
+    info: # spring-boot 2.6以后info默认值为false.需手动开启
+      env:
+        enabled: true
