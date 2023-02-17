@@ -18,11 +18,18 @@
         <module>spring-mysql-demo</module>
     </modules>
     <properties>
-        <hutool.version>5.8.12</hutool.version>
         <java.version>17</java.version>
+        <hutool.version>5.8.12</hutool.version>
+        <mysql.version>8.0.32</mysql.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

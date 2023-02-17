@@ -1,4 +1,4 @@
-package com.zhang.demos;
+package com.zhang.mysql;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

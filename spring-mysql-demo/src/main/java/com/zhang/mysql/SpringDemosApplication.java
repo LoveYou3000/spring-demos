@@ -1,4 +1,4 @@
-package com.zhang.demos;
+package com.zhang.mysql;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

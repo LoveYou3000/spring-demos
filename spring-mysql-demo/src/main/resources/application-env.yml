@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    # jdbc 基础信息
+    url:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username:
+    password:
+    type: com.zaxxer.hikari.HikariDataSource
+
+    # hikari 数据源配置
+    hikari:
+      maximum-pool-size: 100 # 最大连接数 默认10
+      minimum-idle: 20 # 最小空闲连接 默认10
+      connection-timeout: 60000 # 连接超时时间 单位毫秒 默认30000
+      idle-timeout: 600000 # 空闲连接超时时间 单位毫秒 默认600000, 只有空闲连接数大于 maximum-pool-size 且空闲时间超过该值才会被释放
+      max-lifetime: 3000000 # 连接最大存活时间 单位毫秒 默认1800000 应该比 mysql 设置的超时时间短
+      connection-test-query: select 1
+      auto-commit: true # 从池中返回的连接的默认自动提交行为 默认true
+      pool-name: hikari-pool-1 # hikari 连接池名称 默认HikariPool-1
